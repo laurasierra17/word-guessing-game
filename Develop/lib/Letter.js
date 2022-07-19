@@ -1,6 +1,6 @@
 class Letter {
   constructor(letter) {
-    this.letter = letter;
+    this.char = letter;
 
     if (letter.match(/[a-z]/i) || letter >= '0' && letter <= '9') {
         this.visible = false;
@@ -9,22 +9,22 @@ class Letter {
     }
   }
 
-  toString = () => {
+  toString  ()  {
     if (this.visible) {
-        return this.letter;
+        return this.char;
     }
     return "_";
   }
 
-  guess = (otherLetter) => {
-    if (this.letter === otherLetter) {
+  guess  (otherLetter)  {
+    if (this.char === otherLetter) {
         return true
     }
     return false;
   }
 
-  getSolution = () => {
-    return this.letter;
+  getSolution ()  {
+    return this.char;
   }
 
 }
